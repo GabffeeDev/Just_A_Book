@@ -6,7 +6,7 @@
 # This file customizes what your mod is and and how it starts and builds!
 
 # This controls what your mod is called.
-define config.name = "Bloody Discharge"
+define config.name = "Just A Book"
 
 # This controls whether you want your mod name to show in the main menu.
 # If your mod name is big, it is suggested to turn this off.
@@ -24,7 +24,7 @@ define gui.about = _("")
 # Note:
 #   The build name is ASCII only so no numbers, spaces, or semicolons.
 #   Example: Doki Doki Yuri Time to DokiDokiYuriTime
-define build.name = "BloodyDischarge"
+define build.name = "JustABook"
 
 # This configures whether your mod has sound effects.
 define config.has_sound = True
@@ -81,7 +81,7 @@ default preferences.sfx_volume = 0.75
 #   Windows: %AppData%/RenPy/
 #   macOS: $HOME/Library/RenPy/ (Un-hide the Library Folder)
 #   Linux: $HOME/.renpy/
-define config.save_directory = "Bloody_Discharge-Py3"
+define config.save_directory = "Just_a_Book-Py3"
 
 # This controls the window logo of your mod.
 define config.window_icon = "gui/window_icon.png"

@@ -1,0 +1,74 @@
+Put the "music_covers" folder inside your "mod_assets" folder, otherwise renpy will have a stroke (or you could just replace the folder in the definitions to the one youre using idc).
+
+The definitions are inside the "music_covers" folder in case you wanna check out the new added tracks.
+DONT forget to give credit to "DanFourts" in your mod credits otherwise the FLP Mafia will be after you and your dog.
+
+If you want stems (separate instrument audio files) for any of these songs dont be afraid of hitting me up on discord @DanFourts (i'll prolly be the one who's afraid of responding lmao)
+
+/// Stuff that you may want to know ///
+
+A big majority of the songs in this pack have different tempos/keys/arrangements to achieve different types of feelings, so you probably won't be able to seamlessly switch between them but it's worth a try.
+
+The intro in "ohayou_sayori" is 4.364 seconds longer than the other versions so keep that in mind when swapping to the chill, stripped or glitchy versions.
+The "lights_on" and "lights_off" versions are completely different from the other ones so think of those two tracks as a single song that can crossfade between different states, kind of like interactive music.
+
+"play_with_me", "play_with_me_v2" and "play_with_me_glitchy" run at a BPM of 105 while "play_with_me_stripped" and "play_with_me_distant" run at a BPM of 110, if you want to swap from one version to another make sure they have the same BPM.
+
+/// Stuff that will probably piss you off (sorry) ///
+
+"poem_panic_corrupted" flicker timing isn't exactly the same as the original one and you'll have to change the screen effects' timing so that it fits right.
+What I did was change the flicker times in the "transforms.rpy" file to this:
+
+transform vignetteflicker(t=0):
+    alpha 0.0
+    t + 1.933
+    parallel:
+        alpha 1.00
+        linear 0.24 alpha 0.8
+        0.14
+        alpha 0.7
+        linear 0.1 alpha 1.00
+        alpha 0.0
+        1.45
+        repeat
+    parallel:
+        easeout 20 zoom 3.0
+
+transform layerflicker(t=0):
+    truecenter
+    t + 1.933
+    parallel:
+        zoom 1.05
+        linear 0.24 zoom 1.04
+        0.14
+        zoom 1.035
+        linear 0.1 zoom 1.05
+        zoom 1.0
+        1.45
+        repeat
+    parallel:
+        easeout_bounce 0.3 xalign 0.6
+        easeout_bounce 0.3 xalign 0.4
+        repeat
+
+oh yeah, make sure to play "poem_panic_precorrupted" before queueing the corrupted one because if you use the normal "poem_panic" track it'll take a bit too long before the flickering kicks in.
+Also, don’t forget to change "$ timeleft = 12.453 - get_pos()" to "$ timeleft = 11.707 - get_pos()" after queueing "poem_panic_corrupted". Otherwise, the flickering will start too late.
+
+Script example for those who had a stroke reading my horrible explanation:
+
+    play music poem_panic_precorrupted
+    n "haha boob big"
+    y "shush"
+    queue music poem_panic_corrupted
+    $ timeleft = 11.707 - get_pos()
+    show noise zorder 3 at noisefade(25 + timeleft)
+    show vignette as flicker zorder 4 at vignetteflicker(timeleft)
+    show vignette zorder 4 at vignettefade(timeleft)
+    show layer master at layerflicker(timeleft)
+    n "bitch"
+    y "i brought a knive to school dont even try me"
+
+///
+
+sorry if my explanations sucks ass lmao but if it works for you then :thumbs_up:
+ok bya
