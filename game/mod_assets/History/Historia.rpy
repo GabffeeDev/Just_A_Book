@@ -7,582 +7,1143 @@ label .day_1:
 
     stop music fadeout 0.5
 
-    "Es un día habitual en el club."
-    "Entre mis manos sostengo mi libro favorito, aquel que he leído una y otra vez desde que era una niña."
-    "Podría pasar horas leyendo un libro si tengo una taza de té a mi lado."
-    "El día es perfecto para leer en el club."
-    "Así que abro mi libro y empiezo a leer sin preocupación."
+    scene bg class 2
+
+    "Me encuentro como de costumbre en el club."
+    "Entre mis manos sostengo mi libro favorito."
+    "Aquel que pasaba leyendo horas cuando era niña."
+    "El día es claro, el sol es brillante."
+    "El momento es adecuado para acompañar mi lectura con una buena taza de té relajante."
+    "Me siento en el piso."
+    scene cg yuris book 
+    with fade
+    "Abro mi libro y empiezo a leer despreocupadamente."
+    "Siento paz."
     "He releído este libro más veces de las que me gustaría aceptar."
-    "Por alguna razón me relaja leer algo que ya he leido."
     "Es..."
     "curiosamente relajante."
-    "Mientras paso las páginas, noto que [player] me observa."
-    # Cambio
-    "Me pongo nerviosa al notarlo."
-    "¿Debería saludarle?"
-    "No... no debería hacerlo...{nw}"
-    # stop
-    mc "¡Yuri!"
+    "Voy pasando paginas mientras ojeo mi entorno."
+    "Natsuki."
+    "Monika."
+    "Sayori."
+    "[player]."
+    "Todos ellos hablan juntos en el club."
+    "Ríen."
+    "Comparten y disfrutan."
+    "Parecen tranquilos, parecen cómodos..."
+    "Les sale tan natural, que incluso me da algo de envidia.{nw}"
+    mc "Hola Yuri."
+    show yuri 1n at tcommon
     y "¡A-ah! ¿S-sí?"
-    # Cambio
-    mc "Jajaja, perdón por asustarte..."
+    show yuri 4b at thide
+    mc "¿Te asuste?"
+    mc "Lo siento..."
     mc "es solo que..."
-    mc "Ha pasado bastante tiempo desde la última vez que compartimos una lectura."
-    mc "¿No te gustaría leer juntos?"
+    mc "Te veo muy sola como siempre."
+    mc "Ha pasado bastante tiempo desde la última vez que hacemos algo en general."
+    mc "¿No te gustaría leer... juntos?"
     mc "Como antes."
+    hide yuri
+    scene bg class 3
+    with wiperight_scene
     "Una cálida sonrisa es dibujada en su rostro."
-    # stop
+    "Con ansiedad agarro la manga de mi camisa y empiezo a juguetear con ella."
+    show yuri 1r at hop
     y "¡N-no!"
+    show yuri 4c
     "..."
-    # cambio
     "El silencio se vuelve incomodo."
-    # stop
+    "Los nervios me impulsan a seguir hablando."
+    show yuri 4d
     y "Q-quiero decir..."
     y "No estoy segura de que vaya a gustarte."
-    y "Es un libro... un poco lento."
-    mc "¿Eso es todo?"
-    # cambio
-    mc "No seas tímida..."
+    y "El libro... es un poco lento para principiantes en la lectura."
+    show yuri 4b
+    mc "Se que tus libros no son específicamente lo más simples de leer."
+    mc "¿No se supone de que eso trata compartir?"
     mc "Ambos somos integrantes del club ¿no?"
-    mc "Por eso accedí a convivir con la lectura."
-    "Por alguna razón, noto como [player] se sonroja y mira al suelo unos instantes."
-    "También acaricia su pelo ondulado con timidez."
-    "Me recuerda..."
-    "a mi en cierto modo."
-    # stop
+    mc "Si muestro interés, es porque realmente deseo compartir con contigo."
+    mc "De otro modo, no me hubiera acercado en primer lugar."
+    "[player] esta firmemente parado en la esquina donde me encuentro sentada."
+    "Su postura relajada pero decidida, me expresa que realmente no se ira con una respuesta insatisfactoria."
+    show yuri 1q at thide
     y "B-bueno..."
     y "Supongo que podría prestártelo..."
-    y "Si de verdad quieres leerlo."
+    y "Léelo con clama."
+    y "El libro es pesado."
+    hide yuri
+    # CG Libro en Mnanos de MC
+    scene cg book to mc 
+    with dissolve
     "Con cierta timidez, coloco el libro entre las manos de [player]."
-    mc "Lo leeré con calma en casa."
-    mc "¡Hasta mañana, Yuri!"
-    # Cambio
+    "El recibe el libro, le hecha un vistazo al diseño del mismo."
+    "Olfatea una de las paginas y agrega:"
+    mc "Todavía conserva ese olor particular de los libros..."
+    scene bg class 4
+    with fade
+    mc "En fin."
+    mc "Muchas gracias Yuri, lo leeré con calma en casa."
+    mc "Mañana en el club a la misma hora, hablaremos sobre él."
+    y "D-de acuerdo [player]."
+    y "Solo no te exijas de más."
+    scene black
+    with fade
     "El día termina antes de que pueda asimilarlo."
     "..."
     "Solo espero..."
     "que no encuentre las viejas anotaciones que escribí en ese libro."
     "..."
-    "Tengo miedo.{nw}"
-    # stop
-    jump .day_2
-
-label .day_2:
-
-    # cambio
-    "Segundo día del club, ingreso al salon como de costumbre."
-    "Me preparo un tecito de manzanilla."
-    "Estoy algo ansiosa."
-    "Todas en el club ríen y se saludan entre ellas con mucha naturalidad."
-    "Puedo hacer lo mismo..."
-    "pero me cuesta más."
-    # stop
-    mc "¡Buenos días, Yuri!"
-    y "¿S-sí?"
-    mc "Tu libro está muy interesante."
-    mc "Quería seguir leyendo, pero hoy preferí devolvértelo."
-    mc "Encontré unas anotaciones entre las páginas..."
-    mc "Así que decidí responderlas."
-    mc "¡Incluso escribí algunas propias!"
-    y "¡Q-qué!"
-    mc "Así es."
-    "[player] se aleja para saludar a los demás integrantes del club."
-    # cambio
-    "Derramo algo de té por los nervios."
-    # stop
-    "Con algo de inquietud, abro el libro."
-    "En una de las páginas encuentro una respuesta escrita debajo de una de mis notas."
-    "..."
-    "Mi anotación dice:"
-    "'La amistad no es posible para las personas extremadamente tímidas.'"
-    "La respuesta de [player] dice:"
-    # Cambio
-    "'Yuri...'"
-    # stop
-    "'¿No crees que eso es un poco duro para esas personas?'"
-    "..."
-    "Rápidamente cierro el libro."
-    "Mis mejillas comienzan a arder y mi corazón late con fuerza."
-    "{i}Q-qué vergüenza...{/i}"
-    "Por instinto, vuelvo a abrir el libro."
-    "Debajo de su respuesta escribo lentamente."
-    "'...Bueno, simplemente creo que así son algunas personas.'"
-    "'La protagonista de esta novela no sabe relacionarse con los demás.'"
-    "'Es tímida, frágil, seria... incluso aburrida.'"
-    # Cambio
-    "'¿No te parece molesta?'"
-    # stop
-    "Vuelvo a cerrar el libro."
-    "Con cuidado, toco suavemente el hombro de [player]."
-    y "E-esto..."
-    y "T-ten..."
-    y "Léelo cuando llegues a casa."
-    "[player] me sonríe."
-    "Eso solo hace que mi rostro se sonroje aún más."
-    "Pero ya no hay vuelta atrás."
-    "El libro vuelve a estar entre sus manos."
+    # [jump .day_2]
     # 
-    # Día 3
+    # [label]
+    # .day_2
     # 
-    jump Act_2
-
-label Act_2:
-
-    jump .day_3
-
-label .day_3:
-
-    "Los días fueron pasando y el libro comenzó a llenarse de cada vez más anotaciones."
-    "En una ocasión escribí:"
-    "'El dolor puede convertirse en un escape de la realidad.'"
-    "La respuesta de [player] apareció al día siguiente."
-    "'¿Por qué piensas eso?'"
-    "'¿No crees que la protagonista busca algo más que escapar?'"
-    "Me quedo observando aquellas palabras durante varios segundos."
-    "Nunca imaginé que alguien intentaría comprender lo que escribo..."
-    "en lugar de limitarse a leerlo."
-    "Otra nota mía decía:"
-    "'El rechazo duele mucho. Ella hizo bien en no declararse.'"
-    "Al día siguiente encontré una nueva respuesta."
-    "'Creo que el dolor de no haberlo intentado puede ser todavía más fuerte.'"
-    "'Al menos así nunca vivirás preguntándote qué habría pasado.'"
-    "..."
-    "Cierro el libro de golpe."
-    "Mi corazón comienza a latir con fuerza."
-    "{i}Ya es suficiente por hoy...{/i}"
-    "Apoyo el libro contra mi pecho e intento respirar con normalidad."
-    "¿Por qué tiene que responder precisamente a las partes que más me avergüenzan?"
-    "Podría haber comentado cualquier otra anotación."
-    "Las descripciones."
-    "La forma en que está escrita la novela."
-    "Los personajes secundarios."
-    "Pero siempre termina encontrando esas pequeñas frases..."
-    "...las que escribí sin pensar que alguien más las leería."
-    "Bajo lentamente la mirada."
-    "{i}Me moriré de vergüenza si sigo leyendo...{/i}"
-    "Con cuidado cierro el libro y acaricio la cubierta con la punta de los dedos."
-    # cambio
-    "Un sonrojo leve se hace evidente en mis mejillas."
-    "Aun así..."
-    "me gustan sus respuestas."
-    "¿Se habrá dado cuenta ya...?"
-    # pause 0.5
-    "Siempre responde como si realmente quisiera comprender por que escribo tales anotaciones."
-    "Y..."
-    "eso resulta extrañamente reconfortante."
-    "Levanto la vista."
-    "[player] está conversando con Sayori y Natsuki al otro lado del salón."
-    "Ríe con naturalidad."
-    "Es capaz de hablar con cualquiera."
-    "Yo..."
-    "apenas puedo sostener una conversación sin ponerme nerviosa."
-    "Quizá por eso me resulta más sencillo escribir."
-    "Las palabras permanecen inmóviles sobre el papel."
-    "No tengo que preocuparme por mi voz..."
-    "ni por mi expresión..."
-    "ni por hacer una pausa incómoda."
-    "Solo existen las ideas."
-    "Sin embargo..."
-    "cuando él las responde..."
-    "es como si esas palabras dejaran de ser únicamente mías, como si retornara algún tipo de platica terapéutica."
-    "Con pasos silenciosos me acerco hasta donde está."
-    "Él nota mi presencia y gira ligeramente la cabeza."
-    mc "¿Yuri?"
-    "Sin atreverme a mirarlo directamente, le extiendo el libro."
-    y "A-aquí está..."
-    y "L-lo de siempre..."
-    "Él sonríe con la misma tranquilidad de siempre y toma el libro."
-    mc "Gracias."
-    mc "Esta vez creo que tardaré un poco más en responder."
-    "Parpadeo confundida."
-    y "¿Eh...?"
-    y "¿Por qué?"
-    mc "Hay varias notas nuevas."
-    mc "Quiero pensar bien lo que voy a escribir."
-    "Mi rostro vuelve a calentarse."
-    "{i}¿Las leerá todas...?{/i}"
-    y "N-no tienes que responderlas todas..."
-    y "m-me mataras de la vergüenza."
-    mc "No te preocupes"
-    mc "Quiero hacerlo."
-    "Su respuesta llega con tanta naturalidad que por un momento olvido cómo respirar."
-    # pause 0.5
-    "Asiento en silencio."
-    y "E-entonces..."
-    y "Hasta mañana."
-    mc "Hasta mañana, Yuri."
-    mc "..."
-    mc "Me gustan tus ideas."
-    mc "Son desordenadas, pero tienen cierto encanto."
-    y "jeje... gracias [player]."
-    # stop
-    "Mientras abandono el salón, siento el habitual nudo en el pecho."
-    "Pero hoy..."
-    "es un poco distinto."
-    "Todavía tengo miedo de mostrar lo que pienso."
-    "Todavía temo que, tarde o temprano, encuentre una anotación de la que termine arrepintiéndome."
-    "Sin embargo..."
-    "por primera vez en mucho tiempo..."
-    "también siento curiosidad por saber qué responderá."
-    jump .day_4
-
-label .day_4:
-
-    "Durante toda la noche no pude dormir."
-    "Intenté recordar cada una de las páginas del libro."
-    "Cada anotación."
-    "Cada frase escrita al margen."
-    # cambio
-    "Inspeccionando las ideas cruelmente en mi conciencia."
-    "Hay una página..."
-    "una que escribí hace mucho tiempo."
-    "La que nunca debió permanecer dentro del libro."
-    "..."
-    "Soy muy dura conmigo, pero..."
-    "¿Qué tal si [player] se espanta en algún momento?"
-    "Llegó al club antes que todos."
-    "Mi mirada recorre el salón de un extremo a otro."
-    "Él todavía no ha llegado."
-    "Apreté con fuerza el borde de mi manga, rasgue con fuerza mis brazos."
-    "Un chorro de sangre se hizo evidente cuando lo hice..."
-    "Pronto me limpio y oculto la mancha."
-    "{i}Tengo que recuperar el libro antes de que el lea esa anotación.{/i}"
-    # pause 1.0
-    "Pasaron varios minutos."
-    "La puerta se abrió."
-    mc "Buenos días, Yuri."
-    "El libro estaba entre sus manos."
-    "Sentí que mi estómago se contraía."
-    y "B-buenos días..."
-    mc "Anoche avancé bastante."
-    mc "Hay una parte que me hizo pensar mucho."
-    "Mi respiración se detuvo por un instante."
-    "¿Habrá llegado?"
-    "¿Ya la leyó?"
-    "Con pasos inseguros me acerqué un poco más."
-    y "¿P-podría..."
-    y "ver el libro un momento?"
-    mc "Claro."
-    "Lo tomé con ambas manos y comencé a pasar las páginas rápidamente."
-    "Una."
-    "Otra."
-    "Otra más."
-    "Mi corazón latía con tanta fuerza que apenas podía concentrarme."
-    "Entonces la encontré."
-    "La página estaba abierta."
-    "Mi nota decía:"
-    "'Sangre..., torrentes de excitación'"
-    "'Gusto culposo o escape espantoso?'"
-    "'Lagrimas rojas en mi brazo.'"
-    "'Ideas locas en mi mente.'"
-    "'Quiero parar, no puedo.'"
-    "'Quiero llorar.'"
-    "'Pero el dolor de mi piel toma el papel protagónico de la obra.'"
-    "'Nadie leerá esto... ¿Por qué me molesto en describir a la protagonista?'"
-    "'El dolor, las navajas y la piedra de afilar...'"
-    "'son llamativas, pero me dan miedo.'"
-    "'Que cobarde es la chica.'"
-    "'Que cobarde soy.'"
-    "Ya no podía evitarlo."
-    "Había una respuesta escrita debajo."
-    "Mis ojos se quedaron inmóviles."
-    "[player] había escrito:"
-    "'No sé si esta anotación habla de la protagonista...'"
-    "'...o de alguien que lleva demasiado tiempo intentando llevar cosas que son pesadas y difíciles de sobrellevar.'"
-    "'No me molesta este nota.'"
-    "'La verdad, solo siento profunda empatía por esa persona que describes..'"
-    "'Esa persona no está disfrutando su dolor.'"
-    "'Está atrapada dentro de él en una espiral enferma.'"
-    "..."
-    "Seguí leyendo."
-    "'No creo que la chica sea cobarde.'"
-    "'Creo que es tan estricta y dura consigo misma que no sabe como expresar su dolor de forma sana.'"
-    "'Y... aún así continuo la historia y lo supero.'"
-    "'¿No es eso hermoso?'"
-    "..."
-    "Me quedé observando mi libro durante un tiempo."
-    "En shock, no podía mover mis manos y mis labios temblaban."
-    "No hay odio en esta respuesta."
-    "Las letras comienzan a volverse borrosas."
-    "En un instante... comienzo a recuperar mi cuerpo."
-    "De repente lagrimas recorren mis mejillas."
-    "Me limpio de inmediato y abrazo mi libro tratando de consolarme."
-    # pause 0.5
-    "Una vez en calma..."
-    "Regrese a casa sin despedirme de nadie."
-    "Quería estar sola."
-    "Y procesar este momento."
-    "..."
-    "Por primera vez, sentí un cálido calor en mi pecho."
-    jump Act_3
-
-label Act_3:
-
-    jump .day_5
-
-label .day_5:
-
-    "Al llegar a cas abrí el libro varias veces."
-    "Leí una y otra vez la respuesta de [player]."
-    "Cada vez que llegaba a esas palabras..."
-    "sentía el mismo nudo en el pecho."
-    "..."
-    "Durante años escribí entre estas páginas porque pensaba que los libros eran un lugar seguro."
-    "Podía esconderme detrás de los personajes."
-    "Si alguien encontraba una anotación..."
-    "siempre podía decir que hablaban de la protagonista."
-    "Que solo era un análisis."
-    "Pero ahora..."
-    "esas palabras ya no me protegían."
-    "El me inspecciono con cuidado."
-    "Abrió de par en par mi cabeza. Exploro con cariño mis ideas..."
-    "Tomé el bolígrafo."
-    "Lo sostuve durante varios minutos."
-    "La página estaba en blanco."
-    "Por primera vez..."
-    "no quería escribir sobre la protagonista."
-    "Comencé lentamente."
-    "'Hay algo que nunca he sabido decir.'"
-    "Me detuve."
-    "Respiré hondo."
-    "Luego seguí escribiendo."
-    "'Siempre he tenido miedo de que las personas se cansen de mí.'"
-    "'Por eso intento ser cuidadosa.'"
-    "'No molestar.'"
-    "'No hablar demasiado.'"
-    "'No pedir demasiado.'"
-    "'Pensé que, si ocupaba el menor espacio posible, nadie tendría motivos para irse.'"
-    "'¿Qué opinas de eso [player]?'"
-    "Mis manos temblaban."
-    "Aquellas palabras ya no pertenecían a ningún personaje."
-    "Eran mías."
-    "Cerré el libro de golpe."
-    "{i}¡¿Qué estoy haciendo...?!{/i}"
-    "..."
-    "Al día siguiente llevé el libro al club."
-    "Lo sostuve contra mi pecho durante casi toda la reunión."
-    "Podía esperar."
-    "Podía arrancar la página."
-    "Podía fingir que nunca la escribí."
-    "Entonces vi a [player]."
-    "Él levantó la vista y me dedicó una pequeña sonrisa."
-    "Con pasos inseguros me acerqué."
-    y "A-aquí está..."
-    "Le entregué el libro sin atreverme a mirarlo."
-    "Él lo tomó con cuidado."
-    mc "Gracias, Yuri."
-    "Asentí en silencio y me alejé."
-    "No pude concentrarme durante el resto de la reunión."
-    "Cada minuto parecía durar una hora."
-    "Cuando finalmente terminó el club..."
-    "él se acercó."
-    "Llevaba el libro entre las manos."
-    mc "Yuri."
-    "Me lo extendió."
-    "Lo recibí lentamente."
-    "Había una nueva anotación."
-    "Abrí el libro."
-    "Debajo de mis palabras encontré su respuesta."
-    "'Creo que muchas personas sienten eso.'"
-    "'Pero casi ninguna se atreven a escribirlo como tu lo haces.'"
-    "Seguí leyendo."
-    "'No creo que ocupes demasiado espacio.'"
-    "'De hecho...'"
-    "'Hay días en los que el club se siente más silencioso cuando no hablas y... eso me pone realmente triste Yuri.'"
-    "Mis ojos permanecieron fijos sobre esas líneas."
-    "Él había escrito algo más."
-    "'También quiero decirte algo.'"
-    "..."
-    "'Muchas veces hago bromas o hablo con naturalidad, pensaras que soy de piedra. Pero realmente soy un tipo muy común con sus problemas.'"
-    "'Así que...'"
-    "'Si te consuela saberlo, todos somos igual de torpes... yo suelo ser muy torpe.'"
-    "..."
-    "Cerré el libro lentamente."
-    "Sentí que algo dentro de mí se aflojaba."
-    "Levanté la vista."
-    y "G-gracias..."
-    mc "Jajaja, no te preocupes Yuri, ¿Somo amigos cierto?."
-    "Nos quedamos en silencio."
-    "Era un silencio distinto."
-    "Ya no estaba lleno de distancia."
-    "Ni de vergüenza."
-    "Solo de una extraña tranquilidad."
-    "Y, por primera vez..."
-    "sentí que las páginas del libro comenzaban a quedarse pequeñas para todo lo que aún quedaba por decir."
-    y "E-eres muy tierno."
-    "[player] me da un tierno abrazo."
-    "Nuestros latidos se sincronizan."
-    "Y el tiempo parece ir un poco más despacio para ambos."
-    mc "No estas sola Yuri."
-    y "Gracias por todo [player]."
-    "El abrazo se detiene."
-    "Nuestros rostros notablemente rojizos van recuperando su tono común."
-    "Salimos juntos ese día."
-    "Reímos."
-    "Y la pasamos bien un rato."
-    "Después de un tiempo, cada uno se va a casa."
-    "El día culmina y mi corazón se contenta."
-    "..."
-    "[player] es tan lindo."
-    jump .day_6
-
-label .day_6:
-
-    "El libro ya casi estaba terminado."
-    "Solo quedaban unas pocas páginas."
-    "Durante el trayecto al club no pude evitar pensar en todo lo que había cambiado entre nosotros."
-    "Al principio temía que [player] leyera mis anotaciones."
-    "O que se espantara de ellas."
-    "Y ahora..."
-    "me da rabia que el libro llegara a su final."
-    "Cuando entré al salón, él ya estaba allí."
-    "Sostenía el libro entre las manos."
-    "Al verme, sonrió con suavidad."
-    mc "Buenos días, Yuri."
-    y "B-buenos días..."
-    "Nos sentamos uno al lado del otro."
-    "No hablamos demasiado."
-    "Ya no era necesario."
-    "Él abrió el libro."
-    "Leímos las últimas páginas en silencio."
-    "A veces uno de los dos escribía una pequeña nota."
-    "El otro respondía."
-    "Las palabras iban y venían con la misma naturalidad con la que antes evitábamos mirarnos."
-    "Finalmente llegamos al final de la novela."
-    "La última frase del libro ocupaba apenas un poco de la página."
-    "Debajo de ella no había ninguna anotación."
-    "Solo quedaba una hoja completamente en blanco."
-    "..."
-    "Ninguno escribió."
-    "Pasó un minuto."
-    "Luego otro."
-    "El bolígrafo descansaba entre mis dedos."
-    mc "Parece que se acabó."
-    y "Sí..."
-    y "Me da pena..."
-    "Miré la página vacía."
-    "Durante tanto tiempo pensé que este libro era el único lugar donde podía decir ciertas cosas."
-    "Pero ahora..."
-    "esa hoja en blanco ya no me asustaba."
-    "Comprendí algo en este tiempo."
-    "No debo esconder quien soy."
-    "Ni detrás de las metáforas."
-    "Ni detrás de las novelas."
-    "Es mejor cuando el escucha con ternura lo que quiero decir."
-    "Apoyé la punta del bolígrafo sobre el papel."
-    "Y escribí."
-    "'Gracias por leerme incluso cuando yo no sabía cómo hablar.'"
-    "'Vuelvo y repito...'"
-    "'eres muy tierno.'"
-    "Me detuve un instante."
-    "Luego añadí una última línea."
-    "'¿Quieres que leamos otra novela?'"
-    "Cerré lentamente el bolígrafo."
-    mc "¿Puedo responder?"
-    "Asentí."
-    "Él escribió debajo de mis palabras."
-    "'Con una condición.'"
-    y "¿Mmm?"
-    y "¿C-cuál?"
-    mc "No te ocultes entre los personajes de una historia."
-    mc "Vive el hoy, se la protagonista de esta historia."
-    mc "Enfrentemos los problemas juntos."
-    mc "Yo te apoyare..."
-    mc "¿Quieres hacer lo mismo conmigo?"
-    mc "..."
-    mc "Sentí que mis ojos comenzaban a humedecerse."
-    mc "Cerré el libro con cuidado."
-    mc "Levanté la vista."
-    y "¿Sabes...?"
-    mc "¿Sí?"
-    y "Contigo, creo que cualquier cosa sería muy divertida."
-    "Él sonrió."
-    mc "Contigo también."
-    "Sostuve el libro entre mis manos por última vez."
-    "Durante años pensé que la literatura era un lugar donde esconderme."
-    "Ahora entendía que también podía ser un lugar donde encontrar a alguien."
-    "Y, quizá..."
-    "también donde encontrarme a mí misma."
-    mc "Yuri."
-    y "¿S-sí?"
-    "Él dio un pequeño paso hacia mí."
-    "No había prisa en sus movimientos."
-    "Solo una calma que hacía que el silencio resultara menos intimidante."
-    mc "Gracias."
-    y "¿Por qué...?"
-    mc "Por confiar en mí."
-    mc "Por dejarme leer algo que era tan importante para ti."
-    "Bajé la mirada."
-    "Mis dedos se cerraron con suavidad alrededor del libro."
-    y "Yo..."
-    y "no fui muy valiente."
-    y "Tuve miedo todo el tiempo."
-    y "Miedo de que pensaras que era extraña."
-    y "Miedo de que dejaras de hablarme."
-    y "Miedo de que...{nw}"
-    mc "Lo sé."
-    "Esas dos palabras hicieron más por mí que cualquier explicación."
-    y "Cuando escribía en el libro..."
-    y "pensaba que nadie entendería esas notas."
-    y "Y cuando tú empezaste a responderlas..."
-    y "quise recuperarlo."
-    y "Quise esconder todo."
-    mc "Yuri..."
-    "Levanté lentamente la cabeza."
-    "Él estaba muy cerca."
-    "Lo suficiente para que pudiera ver el cansancio en sus ojos."
-    "Creo que responder tantas notas en la noche le ha afectado."
-    "Me mira con una ternura inexplicable."
-    "Me acerco un poco más y abro los labios."
-    y "¿E-estas muy cerca no lo crees?"
-    mc "No quiero que tengas que esconderte de mí."
-    mc "Ni que te de vergüenza esta situación."
-    "Mi respiración se volvió irregular."
-    "Ninguno habló durante varios segundos."
-    "El club estaba completamente vacío."
-    "La luz de la tarde entraba por las ventanas y hacía que el salón pareciera más silencioso que nunca."
-    "Él levantó una mano lentamente."
-    "Sus dedos rozaron con cuidado uno de los mechones de mi cabello."
-    "Después con cariño acaricio una de mis mejillas."
-    "El gesto fue tan delicado que por un instante..."
-    "N-no lo se, no se como explicarlo."
-    "{i}Me gustan sus ojos{/i}"
-    "Mis manos seguían temblando."
-    "Aun así..."
-    "no sentía miedo."
-    "Sentía una extraña paz."
-    mc "¿Puedo...?"
-    "No fui capaz de responder con palabras."
-    "Solo asentí muy despacio y agarre su cintura con suavidad."
-    "Él acercó un poco más su rostro."
-    "Mi corazón latía con tanta fuerza que podía escucharlo."
-    "Cerré los ojos."
-    "Y entonces..."
-    "El me beso."
-    "Fue un beso suave."
-    "Casi inseguro."
-    "Como si ambos estuviéramos aprendiendo algo completamente nuevo."
-    "Nuca he besado, y al parecer el tampoco."
-    "El tiempo pareció detenerse."
-    "No hubo urgencia."
-    "Ni pasión desbordada."
-    "Solo el calor de un momento que ninguno de los dos quería romper."
-    "Al terminar el beso..."
-    "abrí lentamente los ojos."
-    "Él seguía mirándome con la misma calma."
-    "Instintivamente apoyé la frente contra su pecho."
-    "Podía escuchar los latidos de su corazón."
-    "No eran muy distintos de los míos."
-    y "Pensé que..."
-    y "si alguien me conocía de verdad..."
-    y "se alejaría."
-    mc "Eres muy tontita..."
-    "Cerré los ojos una vez más."
-    "Y, por primera vez en mucho tiempo..."
-    "sentí que no necesitaba esconder ninguna página de mí."
-    "Cerré el libro con cuidado."
-    "No para ocultar las palabras."
-    "Sino porque nuestra conversación ya no estaba escrita en sus hojas."
-    "La siguiente página..."
-    "comenzaba fuera del libro."
-    "Comenzaba con [player]."
-    # stop
+    # [Narrador]
+    # Segundo día del club, ingreso al salon como de costumbre.
+    # Me preparo un tecito de manzanilla.
+    # Estoy algo ansiosa.
+    # Todas en el club ríen y se saludan entre ellas con mucha naturalidad.
+    # Puedo hacer lo mismo...
+    # pero me cuesta más.
+    # 
+    # %% stop %%
+    # 
+    # [Player]
+    # ¡Buenos días, Yuri!
+    # 
+    # [Yuri]
+    # ¿S-sí?
+    # 
+    # [Player]
+    # Tu libro está muy interesante.
+    # Quería seguir leyendo, pero hoy preferí devolvértelo.
+    # Encontré unas anotaciones entre las páginas...
+    # Así que decidí responderlas.
+    # ¡Incluso escribí algunas propias!
+    # 
+    # [Yuri]
+    # ¡Q-qué!
+    # 
+    # [Player]
+    # Así es.
+    # 
+    # [Narrador]
+    # [player] se aleja para saludar a los demás integrantes del club.
+    # %% cambio %%
+    # Derramo algo de té por los nervios.
+    # %% stop %%
+    # Con algo de inquietud, abro el libro.
+    # En una de las páginas encuentro una respuesta escrita debajo de una de mis notas.
+    # 
+    # ...
+    # 
+    # Mi anotación dice:
+    # 
+    # 'La amistad no es posible para las personas extremadamente tímidas.'
+    # 
+    # La respuesta de [player] dice:
+    # %%Cambio%%
+    # 'Yuri...'
+    # %%stop%%
+    # '¿No crees que eso es un poco duro para esas personas?'
+    # 
+    # ...
+    # 
+    # Rápidamente cierro el libro.
+    # 
+    # Mis mejillas comienzan a arder y mi corazón late con fuerza.
+    # 
+    # {i}Q-qué vergüenza...{/i}
+    # 
+    # Por instinto, vuelvo a abrir el libro.
+    # 
+    # Debajo de su respuesta escribo lentamente.
+    # 
+    # '...Bueno, simplemente creo que así son algunas personas.'
+    # 
+    # 'La protagonista de esta novela no sabe relacionarse con los demás.'
+    # 'Es tímida, frágil, seria... incluso aburrida.'
+    # 
+    # %% Cambio %%
+    # '¿No te parece molesta?'
+    # %%stop%%
+    # 
+    # Vuelvo a cerrar el libro.
+    # 
+    # Con cuidado, toco suavemente el hombro de [player].
+    # 
+    # [Yuri]
+    # E-esto...
+    # T-ten...
+    # Léelo cuando llegues a casa.
+    # 
+    # [Narrador]
+    # [player] me sonríe.
+    # 
+    # Eso solo hace que mi rostro se sonroje aún más.
+    # 
+    # Pero ya no hay vuelta atrás.
+    # 
+    # El libro vuelve a estar entre sus manos.
+    # 
+    # 
+    # [jump Act_2]
+    # 
+    # [label]
+    # Act_2
+    # 
+    # [jump .day_3]
+    # 
+    # [label]
+    # .day_3
+    # 
+    # [Narrador]
+    # Los días fueron pasando y el libro comenzó a llenarse de cada vez más anotaciones.
+    # 
+    # En una ocasión escribí:
+    # 
+    # 'El dolor puede convertirse en un escape de la realidad.'
+    # 
+    # La respuesta de [player] apareció al día siguiente.
+    # 
+    # '¿Por qué piensas eso?'
+    # 
+    # '¿No crees que la protagonista busca algo más que escapar?'
+    # 
+    # [Narrador]
+    # Me quedo observando aquellas palabras durante varios segundos.
+    # 
+    # Nunca imaginé que alguien intentaría comprender lo que escribo...
+    # en lugar de limitarse a leerlo.
+    # 
+    # Otra nota mía decía:
+    # 
+    # 'El rechazo duele mucho. Ella hizo bien en no declararse.'
+    # 
+    # Al día siguiente encontré una nueva respuesta.
+    # 
+    # 'Creo que el dolor de no haberlo intentado puede ser todavía más fuerte.'
+    # 
+    # 'Al menos así nunca vivirás preguntándote qué habría pasado.'
+    # 
+    # ...
+    # 
+    # Cierro el libro de golpe.
+    # 
+    # Mi corazón comienza a latir con fuerza.
+    # 
+    # {i}Ya es suficiente por hoy...{/i}
+    # 
+    # Apoyo el libro contra mi pecho e intento respirar con normalidad.
+    # 
+    # ¿Por qué tiene que responder precisamente a las partes que más me avergüenzan?
+    # 
+    # Podría haber comentado cualquier otra anotación.
+    # 
+    # Las descripciones.
+    # 
+    # La forma en que está escrita la novela.
+    # 
+    # Los personajes secundarios.
+    # 
+    # Pero siempre termina encontrando esas pequeñas frases...
+    # 
+    # ...las que escribí sin pensar que alguien más las leería.
+    # 
+    # Bajo lentamente la mirada.
+    # 
+    # {i}Me moriré de vergüenza si sigo leyendo...{/i}
+    # 
+    # Con cuidado cierro el libro y acaricio la cubierta con la punta de los dedos.
+    # 
+    # %%cambio%%
+    # 
+    # Un sonrojo leve se hace evidente en mis mejillas.
+    # 
+    # Aun así...
+    # 
+    # me gustan sus respuestas.
+    # 
+    # ¿Se habrá dado cuenta ya...?
+    # 
+    # %% pause 0.5 %%
+    # 
+    # Siempre responde como si realmente quisiera comprender por que escribo tales anotaciones.
+    # 
+    # Y...
+    # 
+    # eso resulta extrañamente reconfortante.
+    # 
+    # Levanto la vista.
+    # 
+    # [player] está conversando con Sayori y Natsuki al otro lado del salón.
+    # 
+    # Ríe con naturalidad.
+    # 
+    # Es capaz de hablar con cualquiera.
+    # 
+    # Yo...
+    # 
+    # apenas puedo sostener una conversación sin ponerme nerviosa.
+    # 
+    # Quizá por eso me resulta más sencillo escribir.
+    # 
+    # Las palabras permanecen inmóviles sobre el papel.
+    # 
+    # No tengo que preocuparme por mi voz...
+    # 
+    # ni por mi expresión...
+    # 
+    # ni por hacer una pausa incómoda.
+    # 
+    # Solo existen las ideas.
+    # 
+    # Sin embargo...
+    # 
+    # cuando él las responde...
+    # 
+    # es como si esas palabras dejaran de ser únicamente mías, como si retornara algún tipo de platica terapéutica.
+    # 
+    # Con pasos silenciosos me acerco hasta donde está.
+    # 
+    # Él nota mi presencia y gira ligeramente la cabeza.
+    # 
+    # [Player]
+    # 
+    # ¿Yuri?
+    # 
+    # [Narrador]
+    # 
+    # Sin atreverme a mirarlo directamente, le extiendo el libro.
+    # 
+    # [Yuri]
+    # 
+    # A-aquí está...
+    # 
+    # L-lo de siempre...
+    # 
+    # [Narrador]
+    # Él sonríe con la misma tranquilidad de siempre y toma el libro.
+    # 
+    # [Player]
+    # 
+    # Gracias.
+    # 
+    # [Player]
+    # Esta vez creo que tardaré un poco más en responder.
+    # 
+    # [Narrador]
+    # Parpadeo confundida.
+    # 
+    # [Yuri]
+    # 
+    # ¿Eh...?
+    # ¿Por qué?
+    # 
+    # [Player]
+    # 
+    # Hay varias notas nuevas.
+    # 
+    # Quiero pensar bien lo que voy a escribir.
+    # 
+    # [Narrador]
+    # Mi rostro vuelve a calentarse.
+    # 
+    # {i}¿Las leerá todas...?{/i}
+    # 
+    # [Yuri]
+    # 
+    # N-no tienes que responderlas todas...
+    # m-me mataras de la vergüenza.
+    # 
+    # [Player]
+    # 
+    # No te preocupes
+    # Quiero hacerlo.
+    # 
+    # [Narrador]
+    # Su respuesta llega con tanta naturalidad que por un momento olvido cómo respirar.
+    # 
+    # %%pause 0.5%%
+    # 
+    # Asiento en silencio.
+    # 
+    # [Yuri]
+    # 
+    # E-entonces...
+    # 
+    # Hasta mañana.
+    # 
+    # [Player]
+    # 
+    # Hasta mañana, Yuri.
+    # ...
+    # Me gustan tus ideas.
+    # Son desordenadas, pero tienen cierto encanto.
+    # 
+    # [Yuri]
+    # jeje... gracias [player].
+    # 
+    # %%stop%%
+    # 
+    # [Narrador]
+    # Mientras abandono el salón, siento el habitual nudo en el pecho.
+    # 
+    # Pero hoy...
+    # 
+    # es un poco distinto.
+    # 
+    # Todavía tengo miedo de mostrar lo que pienso.
+    # 
+    # Todavía temo que, tarde o temprano, encuentre una anotación de la que termine arrepintiéndome.
+    # 
+    # Sin embargo...
+    # 
+    # por primera vez en mucho tiempo...
+    # 
+    # también siento curiosidad por saber qué responderá.
+    # 
+    # [jump .day_4]
+    # 
+    # [label]
+    # .day_4
+    # 
+    # [Narrador]
+    # Durante toda la noche no pude dormir.
+    # 
+    # Intenté recordar cada una de las páginas del libro.
+    # 
+    # Cada anotación.
+    # 
+    # Cada frase escrita al margen.
+    # 
+    # %%cambio%%
+    # Inspeccionando las ideas cruelmente en mi conciencia.
+    # 
+    # Hay una página...
+    # 
+    # una que escribí hace mucho tiempo.
+    # 
+    # La que nunca debió permanecer dentro del libro.
+    # 
+    # ...
+    # 
+    # Soy muy dura conmigo, pero...
+    # ¿Qué tal si [player] se espanta en algún momento?
+    # 
+    # Llegó al club antes que todos.
+    # 
+    # Mi mirada recorre el salón de un extremo a otro.
+    # 
+    # Él todavía no ha llegado.
+    # 
+    # Apreté con fuerza el borde de mi manga, rasgue con fuerza mis brazos.
+    # 
+    # Un chorro de sangre se hizo evidente cuando lo hice...
+    # 
+    # Pronto me limpio y oculto la mancha.
+    # 
+    # {i}Tengo que recuperar el libro antes de que el lea esa anotación.{/i}
+    # 
+    # %% pause 1.0 %%
+    # 
+    # Pasaron varios minutos.
+    # 
+    # La puerta se abrió.
+    # 
+    # [Player]
+    # Buenos días, Yuri.
+    # 
+    # [Narrador]
+    # El libro estaba entre sus manos.
+    # 
+    # Sentí que mi estómago se contraía.
+    # 
+    # [Yuri]
+    # B-buenos días...
+    # 
+    # [Player]
+    # Anoche avancé bastante.
+    # 
+    # Hay una parte que me hizo pensar mucho.
+    # 
+    # [Narrador]
+    # Mi respiración se detuvo por un instante.
+    # 
+    # ¿Habrá llegado?
+    # 
+    # ¿Ya la leyó?
+    # 
+    # Con pasos inseguros me acerqué un poco más.
+    # 
+    # [Yuri]
+    # ¿P-podría...
+    # 
+    # ver el libro un momento?
+    # 
+    # [Player]
+    # Claro.
+    # 
+    # [Narrador]
+    # Lo tomé con ambas manos y comencé a pasar las páginas rápidamente.
+    # 
+    # Una.
+    # 
+    # Otra.
+    # 
+    # Otra más.
+    # 
+    # Mi corazón latía con tanta fuerza que apenas podía concentrarme.
+    # 
+    # Entonces la encontré.
+    # 
+    # La página estaba abierta.
+    # 
+    # Mi nota decía:
+    # 
+    # 'Sangre..., torrentes de excitación'
+    # 'Gusto culposo o escape espantoso?'
+    # 'Lagrimas rojas en mi brazo.'
+    # 'Ideas locas en mi mente.'
+    # 'Quiero parar, no puedo.'
+    # 'Quiero llorar.'
+    # 'Pero el dolor de mi piel toma el papel protagónico de la obra.'
+    # 'Nadie leerá esto... ¿Por qué me molesto en describir a la protagonista?'
+    # 'El dolor, las navajas y la piedra de afilar...'
+    # 'son llamativas, pero me dan miedo.'
+    # 'Que cobarde es la chica.'
+    # 'Que cobarde soy.'
+    # 
+    # Ya no podía evitarlo.
+    # 
+    # Había una respuesta escrita debajo.
+    # 
+    # Mis ojos se quedaron inmóviles.
+    # 
+    # [player] había escrito:
+    # 
+    # 'No sé si esta anotación habla de la protagonista...'
+    # 
+    # '...o de alguien que lleva demasiado tiempo intentando llevar cosas que son pesadas y difíciles de sobrellevar.'
+    # 
+    # 'No me molesta este nota.'
+    # 
+    # 'La verdad, solo siento profunda empatía por esa persona que describes..'
+    # 
+    # 'Esa persona no está disfrutando su dolor.'
+    # 
+    # 'Está atrapada dentro de él en una espiral enferma.'
+    # 
+    # ...
+    # 
+    # Seguí leyendo.
+    # 
+    # 'No creo que la chica sea cobarde.'
+    # 
+    # 'Creo que es tan estricta y dura consigo misma que no sabe como expresar su dolor de forma sana.'
+    # 
+    # 'Y... aún así continuo la historia y lo supero.'
+    # 
+    # '¿No es eso hermoso?'
+    # 
+    # ...
+    # 
+    # Me quedé observando mi libro durante un tiempo.
+    # 
+    # En shock, no podía mover mis manos y mis labios temblaban.
+    # 
+    # No hay odio en esta respuesta.
+    # 
+    # Las letras comienzan a volverse borrosas.
+    # 
+    # En un instante... comienzo a recuperar mi cuerpo.
+    # 
+    # De repente lagrimas recorren mis mejillas.
+    # 
+    # Me limpio de inmediato y abrazo mi libro tratando de consolarme.
+    # 
+    # %%pause 0.5%%
+    # 
+    # Una vez en calma...
+    # Regrese a casa sin despedirme de nadie.
+    # Quería estar sola.
+    # Y procesar este momento.
+    # 
+    # ...
+    # 
+    # Por primera vez, sentí un cálido calor en mi pecho.
+    # 
+    # [jump Act_3]
+    # 
+    # [label]
+    # Act_3
+    # 
+    # [jump .day_5]
+    # 
+    # [label]
+    # .day_5
+    # 
+    # [Narrador]
+    # Al llegar a cas abrí el libro varias veces.
+    # 
+    # Leí una y otra vez la respuesta de [player].
+    # 
+    # Cada vez que llegaba a esas palabras...
+    # 
+    # sentía el mismo nudo en el pecho.
+    # 
+    # ...
+    # 
+    # Durante años escribí entre estas páginas porque pensaba que los libros eran un lugar seguro.
+    # 
+    # Podía esconderme detrás de los personajes.
+    # 
+    # Si alguien encontraba una anotación...
+    # 
+    # siempre podía decir que hablaban de la protagonista.
+    # 
+    # Que solo era un análisis.
+    # 
+    # Pero ahora...
+    # 
+    # esas palabras ya no me protegían.
+    # 
+    # El me inspecciono con cuidado.
+    # 
+    # Abrió de par en par mi cabeza. Exploro con cariño mis ideas...
+    # 
+    # Tomé el bolígrafo.
+    # 
+    # Lo sostuve durante varios minutos.
+    # 
+    # La página estaba en blanco.
+    # 
+    # Por primera vez...
+    # 
+    # no quería escribir sobre la protagonista.
+    # 
+    # Comencé lentamente.
+    # 
+    # 'Hay algo que nunca he sabido decir.'
+    # 
+    # Me detuve.
+    # 
+    # Respiré hondo.
+    # 
+    # Luego seguí escribiendo.
+    # 
+    # 'Siempre he tenido miedo de que las personas se cansen de mí.'
+    # 
+    # 'Por eso intento ser cuidadosa.'
+    # 
+    # 'No molestar.'
+    # 
+    # 'No hablar demasiado.'
+    # 
+    # 'No pedir demasiado.'
+    # 
+    # 'Pensé que, si ocupaba el menor espacio posible, nadie tendría motivos para irse.'
+    # 
+    # '¿Qué opinas de eso [player]?'
+    # 
+    # Mis manos temblaban.
+    # 
+    # Aquellas palabras ya no pertenecían a ningún personaje.
+    # 
+    # Eran mías.
+    # 
+    # Cerré el libro de golpe.
+    # 
+    # {i}¡¿Qué estoy haciendo...?!{/i}
+    # 
+    # ...
+    # 
+    # Al día siguiente llevé el libro al club.
+    # 
+    # Lo sostuve contra mi pecho durante casi toda la reunión.
+    # 
+    # Podía esperar.
+    # 
+    # Podía arrancar la página.
+    # 
+    # Podía fingir que nunca la escribí.
+    # 
+    # Entonces vi a [player].
+    # 
+    # Él levantó la vista y me dedicó una pequeña sonrisa.
+    # 
+    # Con pasos inseguros me acerqué.
+    # 
+    # [Yuri]
+    # A-aquí está...
+    # 
+    # [Narrador]
+    # Le entregué el libro sin atreverme a mirarlo.
+    # 
+    # Él lo tomó con cuidado.
+    # 
+    # [Player]
+    # Gracias, Yuri.
+    # 
+    # [Narrador]
+    # Asentí en silencio y me alejé.
+    # 
+    # No pude concentrarme durante el resto de la reunión.
+    # 
+    # Cada minuto parecía durar una hora.
+    # 
+    # Cuando finalmente terminó el club...
+    # 
+    # él se acercó.
+    # 
+    # Llevaba el libro entre las manos.
+    # 
+    # [Player]
+    # Yuri.
+    # 
+    # [Narrador]
+    # Me lo extendió.
+    # 
+    # Lo recibí lentamente.
+    # 
+    # Había una nueva anotación.
+    # 
+    # Abrí el libro.
+    # 
+    # Debajo de mis palabras encontré su respuesta.
+    # 
+    # 'Creo que muchas personas sienten eso.'
+    # 
+    # 'Pero casi ninguna se atreven a escribirlo como tu lo haces.'
+    # 
+    # Seguí leyendo.
+    # 
+    # 'No creo que ocupes demasiado espacio.'
+    # 
+    # 'De hecho...'
+    # 
+    # 'Hay días en los que el club se siente más silencioso cuando no hablas y... eso me pone realmente triste Yuri.'
+    # 
+    # Mis ojos permanecieron fijos sobre esas líneas.
+    # 
+    # Él había escrito algo más.
+    # 
+    # 'También quiero decirte algo.'
+    # 
+    # ...
+    # 
+    # 'Muchas veces hago bromas o hablo con naturalidad, pensaras que soy de piedra. Pero realmente soy un tipo muy común con sus problemas.'
+    # 
+    # 'Así que...'
+    # 
+    # 'Si te consuela saberlo, todos somos igual de torpes... yo suelo ser muy torpe.'
+    # 
+    # ...
+    # 
+    # Cerré el libro lentamente.
+    # 
+    # Sentí que algo dentro de mí se aflojaba.
+    # 
+    # Levanté la vista.
+    # 
+    # [Yuri]
+    # G-gracias...
+    # 
+    # [Player]
+    # Jajaja, no te preocupes Yuri, ¿Somo amigos cierto?.
+    # 
+    # [Narrador]
+    # Nos quedamos en silencio.
+    # 
+    # Era un silencio distinto.
+    # 
+    # Ya no estaba lleno de distancia.
+    # 
+    # Ni de vergüenza.
+    # 
+    # Solo de una extraña tranquilidad.
+    # 
+    # Y, por primera vez...
+    # 
+    # sentí que las páginas del libro comenzaban a quedarse pequeñas para todo lo que aún quedaba por decir.
+    # 
+    # [Yuri]
+    # E-eres muy tierno.
+    # 
+    # [Narrador]
+    # [player] me da un tierno abrazo.
+    # Nuestros latidos se sincronizan.
+    # Y el tiempo parece ir un poco más despacio para ambos.
+    # 
+    # [Player]
+    # No estas sola Yuri.
+    # 
+    # [Yuri]
+    # Gracias por todo [player].
+    # 
+    # [Narrador]
+    # El abrazo se detiene.
+    # Nuestros rostros notablemente rojizos van recuperando su tono común.
+    # Salimos juntos ese día.
+    # 
+    # Reímos.
+    # Y la pasamos bien un rato.
+    # Después de un tiempo, cada uno se va a casa.
+    # El día culmina y mi corazón se contenta.
+    # 
+    # ...
+    # 
+    # [player] es tan lindo.
+    # 
+    # [jump .day_6]
+    # 
+    # [label]
+    # .day_6
+    # 
+    # [Narrador]
+    # El libro ya casi estaba terminado.
+    # 
+    # Solo quedaban unas pocas páginas.
+    # 
+    # Durante el trayecto al club no pude evitar pensar en todo lo que había cambiado entre nosotros.
+    # 
+    # Al principio temía que [player] leyera mis anotaciones.
+    # 
+    # O que se espantara de ellas.
+    # 
+    # Y ahora...
+    # 
+    # me da rabia que el libro llegara a su final.
+    # 
+    # Cuando entré al salón, él ya estaba allí.
+    # 
+    # Sostenía el libro entre las manos.
+    # 
+    # Al verme, sonrió con suavidad.
+    # 
+    # [Player]
+    # Buenos días, Yuri.
+    # 
+    # [Yuri]
+    # B-buenos días...
+    # 
+    # [Narrador]
+    # Nos sentamos uno al lado del otro.
+    # 
+    # No hablamos demasiado.
+    # 
+    # Ya no era necesario.
+    # 
+    # Él abrió el libro.
+    # 
+    # Leímos las últimas páginas en silencio.
+    # 
+    # A veces uno de los dos escribía una pequeña nota.
+    # 
+    # El otro respondía.
+    # 
+    # Las palabras iban y venían con la misma naturalidad con la que antes evitábamos mirarnos.
+    # 
+    # Finalmente llegamos al final de la novela.
+    # 
+    # La última frase del libro ocupaba apenas un poco de la página.
+    # 
+    # Debajo de ella no había ninguna anotación.
+    # 
+    # Solo quedaba una hoja completamente en blanco.
+    # 
+    # ...
+    # 
+    # Ninguno escribió.
+    # 
+    # Pasó un minuto.
+    # 
+    # Luego otro.
+    # 
+    # El bolígrafo descansaba entre mis dedos.
+    # 
+    # [Player]
+    # Parece que se acabó.
+    # 
+    # [Yuri]
+    # Sí...
+    # Me da pena...
+    # 
+    # [Narrador]
+    # Miré la página vacía.
+    # 
+    # Durante tanto tiempo pensé que este libro era el único lugar donde podía decir ciertas cosas.
+    # 
+    # Pero ahora...
+    # 
+    # esa hoja en blanco ya no me asustaba.
+    # 
+    # Comprendí algo en este tiempo.
+    # 
+    # No debo esconder quien soy.
+    # 
+    # Ni detrás de las metáforas.
+    # 
+    # Ni detrás de las novelas.
+    # 
+    # Es mejor cuando el escucha con ternura lo que quiero decir.
+    # 
+    # Apoyé la punta del bolígrafo sobre el papel.
+    # 
+    # Y escribí.
+    # 
+    # 'Gracias por leerme incluso cuando yo no sabía cómo hablar.'
+    # 'Vuelvo y repito...'
+    # 'eres muy tierno.'
+    # 
+    # Me detuve un instante.
+    # 
+    # Luego añadí una última línea.
+    # 
+    # '¿Quieres que leamos otra novela?'
+    # 
+    # Cerré lentamente el bolígrafo.
+    # 
+    # [Player]
+    # ¿Puedo responder?
+    # 
+    # [Narrador]
+    # Asentí.
+    # 
+    # Él escribió debajo de mis palabras.
+    # 
+    # 'Con una condición.'
+    # 
+    # [Yuri]
+    # ¿Mmm?
+    # ¿C-cuál?
+    # 
+    # [Player]
+    # 
+    # No te ocultes entre los personajes de una historia.
+    # Vive el hoy, se la protagonista de esta historia.
+    # Enfrentemos los problemas juntos.
+    # Yo te apoyare...
+    # ¿Quieres hacer lo mismo conmigo?
+    # 
+    # ...
+    # 
+    # Sentí que mis ojos comenzaban a humedecerse.
+    # 
+    # Cerré el libro con cuidado.
+    # 
+    # Levanté la vista.
+    # 
+    # [Yuri]
+    # ¿Sabes...?
+    # 
+    # [Player]
+    # ¿Sí?
+    # 
+    # [Yuri]
+    # Contigo, creo que cualquier cosa sería muy divertida.
+    # 
+    # [Narrador]
+    # Él sonrió.
+    # 
+    # [Player]
+    # Contigo también.
+    # 
+    # [Narrador]
+    # Sostuve el libro entre mis manos por última vez.
+    # 
+    # Durante años pensé que la literatura era un lugar donde esconderme.
+    # 
+    # Ahora entendía que también podía ser un lugar donde encontrar a alguien.
+    # 
+    # Y, quizá...
+    # 
+    # también donde encontrarme a mí misma.
+    # 
+    # [Player]
+    # Yuri.
+    # 
+    # [Yuri]
+    # ¿S-sí?
+    # 
+    # [Narrador]
+    # Él dio un pequeño paso hacia mí.
+    # 
+    # No había prisa en sus movimientos.
+    # 
+    # Solo una calma que hacía que el silencio resultara menos intimidante.
+    # 
+    # [Player]
+    # Gracias.
+    # 
+    # [Yuri]
+    # ¿Por qué...?
+    # 
+    # [Player]
+    # Por confiar en mí.
+    # 
+    # Por dejarme leer algo que era tan importante para ti.
+    # 
+    # [Narrador]
+    # Bajé la mirada.
+    # 
+    # Mis dedos se cerraron con suavidad alrededor del libro.
+    # 
+    # [Yuri]
+    # Yo...
+    # 
+    # no fui muy valiente.
+    # 
+    # Tuve miedo todo el tiempo.
+    # 
+    # Miedo de que pensaras que era extraña.
+    # 
+    # Miedo de que dejaras de hablarme.
+    # 
+    # Miedo de que...{nw}
+    # 
+    # [Player]
+    # Lo sé.
+    # 
+    # [Narrador]
+    # Esas dos palabras hicieron más por mí que cualquier explicación.
+    # 
+    # [Yuri]
+    # Cuando escribía en el libro...
+    # 
+    # pensaba que nadie entendería esas notas.
+    # 
+    # Y cuando tú empezaste a responderlas...
+    # 
+    # quise recuperarlo.
+    # 
+    # Quise esconder todo.
+    # 
+    # [Player]
+    # Yuri...
+    # 
+    # [Narrador]
+    # Levanté lentamente la cabeza.
+    # 
+    # Él estaba muy cerca.
+    # 
+    # Lo suficiente para que pudiera ver el cansancio en sus ojos.
+    # 
+    # Creo que responder tantas notas en la noche le ha afectado.
+    # 
+    # Me mira con una ternura inexplicable.
+    # 
+    # Me acerco un poco más y abro los labios.
+    # 
+    # [Yuri]
+    # 
+    # ¿E-estas muy cerca no lo crees?
+    # 
+    # [Player]
+    # No quiero que tengas que esconderte de mí.
+    # Ni que te de vergüenza esta situación.
+    # 
+    # [Narrador]
+    # Mi respiración se volvió irregular.
+    # 
+    # Ninguno habló durante varios segundos.
+    # 
+    # El club estaba completamente vacío.
+    # 
+    # La luz de la tarde entraba por las ventanas y hacía que el salón pareciera más silencioso que nunca.
+    # 
+    # Él levantó una mano lentamente.
+    # 
+    # Sus dedos rozaron con cuidado uno de los mechones de mi cabello.
+    # 
+    # Después con cariño acaricio una de mis mejillas.
+    # 
+    # El gesto fue tan delicado que por un instante...
+    # 
+    # N-no lo se, no se como explicarlo.
+    # 
+    # {i}Me gustan sus ojos{/i}
+    # 
+    # Mis manos seguían temblando.
+    # 
+    # Aun así...
+    # 
+    # no sentía miedo.
+    # 
+    # Sentía una extraña paz.
+    # 
+    # [Player]
+    # ¿Puedo...?
+    # 
+    # [Narrador]
+    # No fui capaz de responder con palabras.
+    # 
+    # Solo asentí muy despacio y agarre su cintura con suavidad.
+    # 
+    # Él acercó un poco más su rostro.
+    # 
+    # Mi corazón latía con tanta fuerza que podía escucharlo.
+    # 
+    # Cerré los ojos.
+    # 
+    # Y entonces...
+    # 
+    # El me beso.
+    # 
+    # Fue un beso suave.
+    # 
+    # Casi inseguro.
+    # 
+    # Como si ambos estuviéramos aprendiendo algo completamente nuevo.
+    # 
+    # Nuca he besado, y al parecer el tampoco.
+    # 
+    # El tiempo pareció detenerse.
+    # 
+    # No hubo urgencia.
+    # 
+    # Ni pasión desbordada.
+    # 
+    # Solo el calor de un momento que ninguno de los dos quería romper.
+    # 
+    # Al terminar el beso...
+    # 
+    # abrí lentamente los ojos.
+    # 
+    # Él seguía mirándome con la misma calma.
+    # 
+    # Instintivamente apoyé la frente contra su pecho.
+    # 
+    # Podía escuchar los latidos de su corazón.
+    # 
+    # No eran muy distintos de los míos.
+    # 
+    # [Yuri]
+    # Pensé que...
+    # 
+    # si alguien me conocía de verdad...
+    # 
+    # se alejaría.
+    # 
+    # [Player]
+    # Eres muy tontita...
+    # 
+    # [Narrador]
+    # Cerré los ojos una vez más.
+    # 
+    # Y, por primera vez en mucho tiempo...
+    # 
+    # sentí que no necesitaba esconder ninguna página de mí.
+    # 
+    # Cerré el libro con cuidado.
+    # 
+    # No para ocultar las palabras.
+    # 
+    # Sino porque nuestra conversación ya no estaba escrita en sus hojas.
+    # 
+    # La siguiente página...
+    # 
+    # comenzaba fuera del libro.
+    # 
+    # Comenzaba con [player].
+    # 
